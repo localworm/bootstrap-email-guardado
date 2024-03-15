@@ -1,0 +1,84 @@
+/* Set full height for the body and html */
+body, html {
+    height: 100%;
+}
+
+/* Set full height for the inbox and email */
+.main-content {
+    height: 100%;
+}
+
+/* Styling for the header */
+#header {
+    padding: 10px;
+}
+
+
+
+/* Styling for the sample emails in the Inbox */
+.email {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.email-content {
+    flex-grow: 1;
+}
+
+.sender {
+    font-weight: bold;
+}
+
+.subject {
+    color: #666;
+}
+
+
+
+/* This is the styling for the email in the "open-email-section" */
+.email-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.email-subject, .email-sender {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.email-body {
+    padding-top: 10px;
+}
+
+
+/* This is the styling for the buttons on the sidebar*/
+.sidebar-button {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.sidebar-button .card {
+    border: none;
+}
+
+.sidebar-button .card-body {
+    padding: 10px;
+}
+
+.sidebar-button:hover {
+    background-color: #f8f9fa;
+}
