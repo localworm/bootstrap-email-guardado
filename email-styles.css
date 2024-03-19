@@ -13,6 +13,11 @@ body, html {
     padding: 10px;
 }
 
+/* Styling for inbox */
+#inbox-section {
+    margin-bottom: 85px;
+}
+
 
 
 /* Styling for the sample emails in the Inbox */
@@ -47,7 +52,7 @@ body, html {
 
 
 
-/* This is the styling for the email in the "open-email-section" */
+/* styling for the email in the "open-email-section" */
 .email-container {
     padding: 20px;
     border: 1px solid #ccc;
@@ -55,17 +60,17 @@ body, html {
     margin-bottom: 20px;
 }
 
-.email-subject, .email-sender {
+#email-subject, #email-sender {
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.email-body {
+#email-body {
     padding-top: 10px;
 }
 
 
-/* This is the styling for the buttons on the sidebar*/
+/* styling for the buttons on the sidebar*/
 .sidebar-button {
     width: 100%;
     margin-bottom: 5px;
@@ -80,5 +85,40 @@ body, html {
 }
 
 .sidebar-button:hover {
+    background-color: #44576b;
+}
+
+
+/* styling for footer */
+.footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer button {
+    width: 160px;
+    margin: 0 10px;
+}
+
+
+/* Styling for color slider */
+#slider-container {
+    padding: 20px;
     background-color: #f8f9fa;
+    border-style: dashed;
+    text-align: center;
+}
+
+#slider-container-footer {
+    text-align: center;
+    background-color: #f8f9fa;
+    width: 160px;
+    margin: 0 10px;
+    border-radius: 5%;
+}
+
+#color-slider-sidebar {
+    width: 100%;
+    margin-bottom: 10px;
 }

@@ -19,7 +19,7 @@
             <div class="col-md-6">
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    <button class="btn btn-outline-secondary btn-light" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -33,17 +33,17 @@
             <div class="row">
                 
                 <!-- Email Inbox -->
-                <div id="inbox-section" class="col-12 col-lg-5 bg-light">
+                <div id="inbox-section" class="col-12 col-lg-5">
                     <h2>Email Inbox</h2>
+                    
                     <!-- Emails in the inbox -->
-
-                    <a href="#" class="link-underline link-underline-opacity-0 email" onclick="showOpenEmail(event)">
+                    <div class="email" onclick="updateOpenEmailContent(0)">
                         <div class="profile-img"></div>
                         <div class="email-content">
                             <div class="sender">Sender Name</div>
                             <div class="subject">Email Subject</div>
                         </div>
-                    </a>
+                    </div>
                     
                     <a href="?" class="link-underline link-underline-opacity-0 email">
                         <div class="profile-img"></div>
@@ -128,16 +128,15 @@
                 </div>
 
                 <!-- Open Email -->
-                <div id="open-email-section" class="col-12 col-lg-7 d-none d-lg-block bg-light">
+                <div id="open-email-section" class="col-12 col-lg-7 d-none d-lg-block">
                     <h2>Open Email</h2>
-                    <!-- Open email content goes here -->
                     <div class="email-container">
                         <div class="email-content">
-                            <div class="email-subject">Email Subject</div>
-                            <div class="email-sender">Sender Name</div>
-                            <div class="email-body">
+                            <input type="text" id="email-subject" class="form-control" placeholder="Subject: " readonly>
+                            <input type="text" id="email-sender" class="form-control" placeholder="From: " readonly>
+                            <textarea id="email-body" class="form-control" rows="6" placeholder="Body" readonly>
                                 Email contents go here.
-                            </div>
+                            </textarea>
                         </div>
                     </div>
                 </div>
@@ -146,21 +145,125 @@
 
         <!-- Sidebar/Footer -->
 
-        <div class="col-md-3 d-none d-md-block bg-light sidebar order-md-first">
+        <div id="sidebar" class="col-md-3 d-none d-md-block sidebar order-md-first">
             <h2>Sidebar</h2>
+
+            <!-- Inbox button -->
+            <div id="inbox-button-container">
+                <button class="btn btn-light sidebar-button" onclick="openInbox()">
+                    <div class="card">
+                        <div class="card-body">
+                            Inbox
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Compose Email Button -->
+            <div id="compose-email-container">
+                <button class="btn btn-light sidebar-button" onclick="composeEmail()">
+                    <div class="card">
+                        <div class="card-body">
+                            Compose Email
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Saved Button (No Function) -->
             <button class="btn btn-light sidebar-button">
                 <div class="card">
                     <div class="card-body">
-                        Button 1
+                        Saved
                     </div>
                 </div>
             </button>
+
+            <!-- Spam Button (No Function) -->
+            <button class="btn btn-light sidebar-button">
+                <div class="card">
+                    <div class="card-body">
+                        Spam
+                    </div>
+                </div>
+            </button>
+
+            <!-- Drafts Button (No Function) -->
+            <button class="btn btn-light sidebar-button">
+                <div class="card">
+                    <div class="card-body">
+                        Drafts
+                    </div>
+                </div>
+            </button>
+
+            <!-- Urgent Button (No Function) -->
+            <button class="btn btn-light sidebar-button">
+                <div class="card">
+                    <div class="card-body">
+                        Urgent
+                    </div>
+                </div>
+            </button>
+
+            <!-- Promotions Button (No Function) -->
+            <button class="btn btn-light sidebar-button">
+                <div class="card">
+                    <div class="card-body">
+                        Promotions
+                    </div>
+                </div>
+            </button>
+
+            <!-- Trash Button (No Function) -->
+            <button class="btn btn-light sidebar-button">
+                <div class="card">
+                    <div class="card-body">
+                        Trash
+                    </div>
+                </div>
+            </button>
+
+            <!-- Color Slider -->
+            <div id="slider-container">
+                MOOD
+                <input type="range" class="slider color-slider" id="color-slider-sidebar" min="0" max="240" value="0">
+            </div>
+            
         </div>
 
-        <footer class="footer fixed-bottom bg-light d-md-none">
-            <h2>Footer</h2>
-            <!-- Footer content goes here -->
+        <footer id="footer" class="footer fixed-bottom d-md-none">
+
+            <!-- Inbox button -->
+            <div id="inbox-button-container">
+                <button class="btn btn-light sidebar-button" onclick="openInbox()">
+                    <div class="card">
+                        <div class="card-body">
+                            Inbox
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Compose Email Button -->
+            <div id="compose-email-container">
+                <button class="btn btn-light sidebar-button" onclick="composeEmail()">
+                    <div class="card">
+                        <div class="card-body">
+                            Compose Email
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Color Selector for the footer -->
+            <div id="slider-container-footer">
+                MOOD
+                <input type="range" class="slider color-slider" id="color-slider-footer" min="0" max="240" value="0">
+            </div>
+
         </footer>
+
     </div>
 </div>
 
