@@ -30,6 +30,11 @@ body, html {
     margin-bottom: 10px;
 }
 
+.email:hover {
+    background-color: #c3d0df;
+    cursor: pointer;
+}
+
 .profile-img {
     width: 50px;
     height: 50px;
@@ -43,11 +48,11 @@ body, html {
 }
 
 .sender {
-    font-weight: bold;
+    color: #666;
 }
 
 .subject {
-    color: #666;
+    font-weight: bold;
 }
 
 
@@ -84,8 +89,8 @@ body, html {
     padding: 10px;
 }
 
-.sidebar-button:hover {
-    background-color: #44576b;
+.sidebar-button:hover .card-body:hover {
+    background-color: #c3d0df;
 }
 
 
@@ -102,12 +107,12 @@ body, html {
 }
 
 
-/* Styling for color slider */
+/* Styling for color slider containers */
 #slider-container {
     padding: 20px;
     background-color: #f8f9fa;
-    border-style: dashed;
     text-align: center;
+    border-radius: 10px;
 }
 
 #slider-container-footer {
@@ -115,7 +120,12 @@ body, html {
     background-color: #f8f9fa;
     width: 160px;
     margin: 0 10px;
-    border-radius: 5%;
+    border-radius: 10px;
+}
+
+/* Styling for the actual color sliders */
+#color-slider-footer {
+    width: 90%;
 }
 
 #color-slider-sidebar {
